@@ -1,0 +1,69 @@
+[manifest]
+version = "1.0.0"
+priority = 0
+
+#Sets up to allow Fossilisation
+[[patches]]
+[patches.pattern]
+target = 'game.lua'
+pattern = '''joker_usage = {},'''
+position = 'after'
+payload = '''
+fossilisations = {},
+'''
+match_indent = true
+
+#Allows for fossilisation to be added to the abilities of vanilla jokers
+
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''Card = Moveable:extend()'''
+position = 'after'
+payload = '''
+function fossilise(card)
+        G.GAME.fossilisations[#G.GAME.fossilisations+1] = card
+        SMODS.destroy_cards(card, nil, nil, false)
+        return{
+        message = "Fossilised!",
+        colour = G.C.RED
+    }
+end
+'''
+match_indent = true
+
+#Fossilised Cavendish and Gros Michel upon extinction
+
+[[patches]]
+[patches.pattern]
+target = 'card.lua'
+pattern = '''if self.ability.name == 'Gros Michel' or self.ability.name == 'Cavendish' then
+                    if SMODS.pseudorandom_probability(self, self.ability.name == 'Cavendish' and 'cavendish' or 'gros_michel', 1, self.ability.extra.odds) then 
+                        SMODS.destroy_cards(self, nil, nil, true)
+                        if self.ability.name == 'Gros Michel' then G.GAME.pool_flags.gros_michel_extinct = true end
+                        return {
+                            message = localize('k_extinct_ex')
+                        }
+                    else
+                        return {
+                            message = localize('k_safe_ex')
+                        }
+                    end
+                end'''
+position = 'at'
+payload = '''
+if self.ability.name == 'Gros Michel' or self.ability.name == 'Cavendish' then
+                    if SMODS.pseudorandom_probability(self, self.ability.name == 'Cavendish' and 'cavendish' or 'gros_michel', 1, self.ability.extra.odds) then 
+                        fossilise(self)
+                        if self.ability.name == 'Gros Michel' then G.GAME.pool_flags.gros_michel_extinct = true end
+                        return {
+                            message = localize('k_extinct_ex')
+                        }
+                    else
+                        return {
+                            message = localize('k_safe_ex')
+                        }
+                    end
+                end
+'''
+match_indent = true

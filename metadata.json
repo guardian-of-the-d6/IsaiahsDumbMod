@@ -1,0 +1,9 @@
+{
+    "id":"isaiahsdumbmod",
+    "name": "Isaiah's Dumb Mod",
+    "author":["Bumblebor"],
+    "description": "This mod is not suitable for human consumption",
+    "prefix":"isaiah",
+    "main_file": "main.lua",
+    "version": "0.0.1a"
+}
