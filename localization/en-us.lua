@@ -262,7 +262,7 @@ return{
             j_isaiah_cartoonclub = {
                 name = "Cartoon Clubs",
                 text = {
-                    "Gains {C:mult}+#1#{} mult when a club is played",
+                    "Gains {C:mult}+#2#{} mult when a club is played",
                     "(Currently {C:mult}+#1#{})"
                 }
             }
@@ -292,7 +292,7 @@ return{
                 name = "Caelum",
                 text = {
                     "Look to the skies and undergo metamorphosis",
-                    "Fossilises your leftmost joker and replaces it with a rare joker"
+                    "Fossilises your jokers and replaces them with a rare jokers"
                 }
             },
             c_isaiah_gladius = {
