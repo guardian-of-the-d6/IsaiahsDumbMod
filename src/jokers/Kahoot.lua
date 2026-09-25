@@ -32,7 +32,7 @@ SMODS.Joker{
             }
         end
         if context.joker_main then
-            card.ability.extra.xmult = true
+            card.ability.extra.active = true
         end
 
     end
