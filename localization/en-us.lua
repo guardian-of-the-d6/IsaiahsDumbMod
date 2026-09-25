@@ -255,7 +255,7 @@ return{
             j_isaiah_cartoondiamond = {
                 name = "Cartoon Diamonds",
                 text = {
-                    "Gains +#1# dollars when a diamond is played",
+                    "Gains +#1# dollars whenever a diamond is played",
                     "(Currently +#1#)"
                 }
             },
