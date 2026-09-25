@@ -26,7 +26,7 @@ SMODS.Joker{
         }
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "slots",card.ability.extra.numerator,card.ability.extra.denominator) then
+        if context.before and context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "slots",card.ability.extra.numerator,card.ability.extra.denominator) then
             card.ability.extra.active = true
             return{
                 xmult = card.ability.extra.xmult
@@ -34,8 +34,11 @@ SMODS.Joker{
         end
         if context.joker_main and self.active == false then
             return{
-                card.ability.extra.xmult
+                xmult = card.ability.extra.xmult
             }
+        end
+        if context.joker_main and self.active == true then
+            self.ability.extra.xmult = false
         end
     end
 }
