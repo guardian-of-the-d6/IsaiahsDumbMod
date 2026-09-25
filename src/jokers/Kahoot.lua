@@ -19,8 +19,8 @@ SMODS.Joker{
         local numerator, denominator = SMODS.get_probability_vars(card, card.ability.extra.numerator, card.ability.extra.denominator + G.GAME.dollars)
         return{            
             vars = {
-                self.ability.extra.numerator,
-                self.ability.extra.denominator,
+                numerator,
+                denominator,
                 self.ability.extra.xmult
             }
         }
