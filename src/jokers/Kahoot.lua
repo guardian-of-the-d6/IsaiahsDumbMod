@@ -1,6 +1,6 @@
 SMODS.Joker{
     key = "kahoot",
-    atlas = sprites2,
+    atlas = "sprites2",
     pos = {
         x = 4,
         y = 1

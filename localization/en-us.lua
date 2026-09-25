@@ -265,6 +265,13 @@ return{
                     "Gains {C:mult}+#2#{} mult when a club is played",
                     "(Currently {C:mult}+#1#{})"
                 }
+            },
+            j_isaiah_kahoot = {
+                name = "Kahoot!",
+                text = {
+                    "Just like VGC Shark Tank",
+                    "I will warn you ahead of time, this relies on probability"
+                }
             }
         },
         isaiah_scryer = {
