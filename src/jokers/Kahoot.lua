@@ -21,20 +21,20 @@ SMODS.Joker{
             vars = {
                 numerator,
                 denominator,
-                self.ability.extra.xmult
+                card.ability.extra.xmult
             }
         }
     end,
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "slots",card.ability.extra.numerator,card.ability.extra.denominator) then
-            self.active = true
+            card.ability.extra.active = true
             return{
-                xmult = self.xmult
+                xmult = card.ability.extra.xmult
             }
         end
         if context.joker_main and self.active == false then
             return{
-                xmult = self.xmult
+                card.ability.extra.xmult
             }
         end
     end
