@@ -19,14 +19,14 @@ SMODS.Joker{
         local numerator, denominator = SMODS.get_probability_vars(card, card.ability.extra.numerator, card.ability.extra.denominator + G.GAME.dollars)
         return{            
             vars = {
-                numerator,
-                denominator,
-                xmult
+                self.ability.extra.numerator,
+                self.ability.extra.denominator,
+                self.ability.extra.xmult
             }
         }
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.hand and context.other_card:get_id()==4 and  SMODS.pseudorandom_probability(card, "slots",card.ability.extra.numerator,card.ability.extra.denominator) then
+        if context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "slots",card.ability.extra.numerator,card.ability.extra.denominator) then
             self.active = true
             return{
                 xmult = self.xmult
