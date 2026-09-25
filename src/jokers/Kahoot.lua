@@ -9,10 +9,9 @@ SMODS.Joker{
     cost = 5,
     config = {
         extra = {
-            xmult = 1.5,
             numerator = 1,
             denominator = 4,
-            active = false
+            active = true
         }
     },
     loc_vars = function(self, info_queue, card)
@@ -26,19 +25,15 @@ SMODS.Joker{
         }
     end,
     calculate = function(self, card, context)
-        if  context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "kahoot", card.ability.extra.numerator,card.ability.extra.denominator) then
-            card.ability.extra.active = true
+        if  context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "kahoot", card.ability.extra.numerator,card.ability.extra.denominator) and card.ability.extra.active then
+            card.ability.extra.active = false
             return{
-                xmult = card.ability.extra.xmult
+                xmult = context.other_card:get_id()
             }
         end
-        if context.joker_main and self.active == false then
-            return{
-                xmult = card.ability.extra.xmult
-            }
+        if context.joker_main then
+            card.ability.extra.xmult = true
         end
-        if context.joker_main and self.active == true then
-            self.ability.extra.xmult = false
-        end
+
     end
 }
