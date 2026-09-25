@@ -9,7 +9,7 @@ SMODS.Joker{
     cost = 5,
     config = {
         extra = {
-            xmult = #G.jokers.cards,
+            xmult = 1.5,
             numerator = 1,
             denominator = 4,
             active = false
