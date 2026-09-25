@@ -22,7 +22,7 @@ SMODS.Joker{
         }
     end,
     calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and context.other_card:is_suit("Diamond") then
+        if context.individual and context.cardarea == G.play and context.other_card:is_suit("Diamonds") then
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = "money", 
