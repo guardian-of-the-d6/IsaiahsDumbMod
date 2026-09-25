@@ -1,6 +1,6 @@
 SMODS.Joker{
     key = "fourthwall",
-    atlas = "placeholders",
+    atlas = "sprites2",
     pos=  {
         x = 0,
         y = 3

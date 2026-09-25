@@ -239,7 +239,7 @@ return{
                         "(Currently {C:chips}+#2#{})"}
             },
             j_isaiah_cartoonheart = {
-                name = "Cartoon Heart",
+                name = "Cartoon Hearts",
                 text = {
                     "Gains {C:white,X:chips}x#2#{} when a heart is played",
                     "(Currently {C:white,X:chips}x#1#{})"
@@ -255,7 +255,7 @@ return{
             j_isaiah_cartoondiamond = {
                 name = "Cartoon Diamonds",
                 text = {
-                    "Gains +#1# dollars whenever a diamond is played",
+                    "Gains +#2# dollars whenever a diamond is played",
                     "(Currently +#1#)"
                 }
             },
