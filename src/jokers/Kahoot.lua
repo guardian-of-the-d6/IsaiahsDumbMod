@@ -26,7 +26,7 @@ SMODS.Joker{
         }
     end,
     calculate = function(self, card, context)
-        if context.before and context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "slots",card.ability.extra.numerator,card.ability.extra.denominator) then
+        if  context.individual and context.cardarea == G.hand and  SMODS.pseudorandom_probability(card, "kahoot", card.ability.extra.numerator,card.ability.extra.denominator) then
             card.ability.extra.active = true
             return{
                 xmult = card.ability.extra.xmult
