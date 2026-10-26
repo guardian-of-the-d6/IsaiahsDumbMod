@@ -26,8 +26,7 @@ return{
             j_isaiah_isaiah = {
                 name = "Isaiah",
                 text = {
-                    "Whenever you change ante, this joker gains{C:white,X:chips} x#3# chips{} and{C:white,X:mult} x#4# mult{}",
-                    "(Currently {C:white,X:chips}x#1# {} and {C:white,X:mult}x#2#{})"
+                    "Creates a rare joker whenevr a joker is fossilised",
                 }
             },
             j_isaiah_sixseven = {
