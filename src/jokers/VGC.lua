@@ -15,7 +15,7 @@ SMODS.Joker{
     loc_vars = function(self, info_queue, card)
         return{
             vars = {
-                card.ability.extra.mult
+                -G.GAME.dollars
             }
         }
     end,

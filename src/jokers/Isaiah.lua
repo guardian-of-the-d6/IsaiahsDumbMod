@@ -1,3 +1,5 @@
+local fossil = SMODS.load_file("src/fossilisation/fossilise.lua")()
+
 SMODS.Joker{
     key='isaiah',
     atlas = 'sprites3',
@@ -13,6 +15,17 @@ SMODS.Joker{
             card:start_materialize()
             card:add_to_deck()
             G.jokers:emplace(card)
+        end
+    if context.end_of_round then
+            for i, joker in ipairs(G.jokers.cards) do
+                if G.jokers.cards[i].ability.name == "Drunkard" then
+                    fossil.fossilise(card)
+                    return{
+                        message = "Alcohol",
+                        colour = G.C.YELLOW
+                    }
+                end
+            end
         end
     end
 }

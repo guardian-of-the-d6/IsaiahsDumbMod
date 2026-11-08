@@ -26,7 +26,21 @@ return{
             j_isaiah_isaiah = {
                 name = "Isaiah",
                 text = {
-                    "Creates a rare joker whenevr a joker is fossilised",
+                    "Creates a rare joker whenever a joker is fossilised",
+                }
+            },
+            j_isaiah_anagh = {
+                name = "Anagh",
+                text = {
+                    "Gives xmult based on how in debt you are",
+                    "(Currently {C:white,X:mult}x#1#{})"
+                }
+            },
+            j_isaiah_august = {
+                name = "August",
+                text = {
+                    "Whenever you change antes, this joker gains {C:white,X:mult}x#4#{} mult and {C:white,X:mult}x#3#{} chips",
+                    "(Currently {C:white,X:mult}x#2#{} mult and {C:white,X:mult}x#1#{} chips)"
                 }
             },
             j_isaiah_sixseven = {
@@ -45,6 +59,15 @@ return{
                     "STONKS",
                     "This card gains 2 dollars when a flush is played",
                     "(Currently +#1#)"
+                }
+            },
+            j_isaiah_arthropleuraarmata = {
+                name = "Arthropleura Armata",
+                text = {
+                    "A large arthropod fromt he carboniferus period (~300MYA)",
+                    "It was basically a millipede and could reach sizes of over 8 feet",
+                    "Can fossilise",
+                    "(Copying Self: #1#)"
                 }
             },
             j_isaiah_notstonks = {
@@ -329,6 +352,22 @@ return{
             },
             p_isaiah_scryerpack = {
                 name = "Scryer's Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:isaiah_scryer} Scryer's{} cards to",
+                    "be used immediately",
+                }
+            },
+            p_isaiah_jumboscryerpack = {
+                name = "Jumbo Scryer's Pack",
+                text = {
+                    "Choose {C:attention}#1#{} of up to",
+                    "{C:attention}#2#{C:isaiah_scryer} Scryer's{} cards to",
+                    "be used immediately",
+                }
+            },
+            p_isaiah_megascryerpack = {
+                name = "Mega Scryer's Pack",
                 text = {
                     "Choose {C:attention}#1#{} of up to",
                     "{C:attention}#2#{C:isaiah_scryer} Scryer's{} cards to",
